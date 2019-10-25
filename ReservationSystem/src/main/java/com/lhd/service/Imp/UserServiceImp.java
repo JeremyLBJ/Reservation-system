@@ -21,7 +21,6 @@ public class UserServiceImp implements UserService {
 		List<User> list = userMapper.selectByExample(null);
 		return list;
 	}
-
 	//用户注册
 	@Override
 	@Transactional
@@ -45,5 +44,5 @@ public class UserServiceImp implements UserService {
 		}
 		return null;
 	}
-
+	
 }
