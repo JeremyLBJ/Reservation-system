@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c"%>
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -118,7 +119,7 @@
                 <li>联系我们</li>
                 <li>(020)28872118 /(020)28872158</li>
                 <li>trend@ecmob.cn</li>
-                <li>广州市中山大道89号天河软件园华景园区B栋西梯五楼</li>
+                <li></li>
             </ul>
             <dl>
                 <dt>关于多商网</dt>
@@ -156,6 +157,14 @@
                 <dd>常见问题</dd>
                 <dd>多商学院</dd>
             </dl>
+            <c:forEach items="${List}" var="r">
+            <dl>
+                <dt>${r}</dt>
+                <input type="button" id="tno" value="点击">
+                
+            </dl>
+            
+            </c:forEach>
         </div>
         <div class="footer-di">
             <span>2019-All rights Reseved</span>
@@ -169,5 +178,16 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+$('#tno').click(function(){
+	
+	$.post('cart',function(data){
+		if(data.code==1){
+		console.log(data);
+		}
+	})
+})
+
+</script>
 </body>
 </html>

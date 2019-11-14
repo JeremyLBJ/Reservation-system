@@ -788,10 +788,10 @@
     <div class="maosha-content">
         <h2>多商秒杀</h2>
         <b>距离结束</b>
-        <!-- <div id="flipcountdownbox1">
+       <!-- <div id="flipcountdownbox1">
             <div class="xdsoft_flipcountdown xdsoft_size_md"><div class="xdsoft_digit" style="background-position: 0px -625px;"></div><div class="xdsoft_digit" style="background-position: 0px -313px;"></div><div class="xdsoft_digit xdsoft_separator"></div><div class="xdsoft_digit" style="background-position: 0px -1px;"></div><div class="xdsoft_digit" style="background-position: 0px -313px;"></div><div class="xdsoft_digit xdsoft_separator"></div><div class="xdsoft_digit" style="background-position: 0px -1249px;"></div><div class="xdsoft_digit" style="background-position: 0px -313px;"></div><div class="xdsoft_clearex"></div></div>
-        </div>
-        <div class="maosha-content-lunbotu"> -->
+        </div> -->
+        <div class="maosha-content-lunbotu">
             <ul>
                 <li>
                     <a href="#"><img src="${pageContext.request.contextPath}images/index/miaosha1.jpg" alt="">
@@ -833,10 +833,10 @@
         </div>
 
     </div>
-</div>
+    </div>
 <div class="main-nvzhnag">
     <div class="main-nvzhnag-content">
-        <p>女装货源<i>更多好货</i></p>
+        <p>女装货源<i> </i></p>
         <div class="nvzhang-zuo"><img src="${pageContext.request.contextPath}images/index/nvzhuanghuoyuan/nvzhuang1.jpg" alt="">
             <ul>
                 <li>
@@ -976,7 +976,7 @@
 </div>
 <div class="main-xiangbao">
     <div class="main-xiangbao-content">
-        <p>箱包货源<i>更多好货</i></p>
+        <p>箱包货源<i> </i></p>
         <div class="xiangbao-you">
             <div class="xiangbao-you-shang">
                 <h4>新鲜抢批</h4>
@@ -1100,7 +1100,7 @@
 </div>
 <div class="main-xiexue">
     <div class="main-xiexue-content">
-        <p>鞋靴货源<i>更多好货</i></p>
+        <p>鞋靴货源<i> </i></p>
         <div class="xiexue-zuo"><img src="${pageContext.request.contextPath}images/index/xiexuehuoyuan/xiexue1.jpg" alt="">
             <ul>
                 <li>
@@ -1234,109 +1234,6 @@
                         </ul>
                     </li>
                 </ol>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="duoshangdongtai">
-    <div>
-        <h2>多商动态</h2>
-    </div>
-
-</div>
-<div class="dongtai">
-    <div class="dongtai-content">
-        <div class="dongtai-zuo">
-            <p>每日推荐 <i>更多 ></i></p>
-            <div class="dongtai-img">
-                <ul>
-                    <li><img src="${pageContext.request.contextPath}images/index/duoshangdongtai/tuijian1.jpg" alt=""></li>
-                    <li><img src="${pageContext.request.contextPath}images/index/duoshangdongtai/tuijian2.jpg" alt=""></li>
-                    <li><img src="${pageContext.request.contextPath}images/index/duoshangdongtai/tuijian3.jpg" alt=""></li>
-                    <li><img src="${pageContext.request.contextPath}images/index/duoshangdongtai/tuijian4.jpg" alt=""></li>
-                    <li><img src="${pageContext.request.contextPath}images/index/duoshangdongtai/tuijian5.jpg" alt=""></li>
-                </ul>
-            </div>
-            <ul>
-                <li>
-                    <span></span>
-                    <a href="#">好嗨哟！春节发出去的红包都能挣回来了！</a>
-                </li>
-                <li>
-                    <span></span>
-                    <a href="#">多商网：23家淘宝直播成交额破亿，卖货真的没那么难？</a>
-                </li>
-                <li>
-                    <span></span>
-                    <a href="#">多商网|瑾泓家电:从细节上提升产品竞争力</a>
-                </li>
-                <li>
-                    <span></span>
-                    <a href="#">2019年，多商网教您如何做好店铺的内容营销</a>
-                </li>
-                <li>
-                    <span></span>
-                    <a href="#">2019年新零售模式有什么趋势?——趋势云服务</a>
-                </li>
-                <li>
-                    <span></span>
-                    <a href="#">趋势动力明星供应商】敏莹爷爷服饰：用消费者的眼光看市场</a>
-                </li>
-            </ul>
-        </div>
-        <div class="dongtai-zhong">
-            <p>卖家成功案例 <i>更多 ></i></p>
-            <ul>
-                <li>
-                    <a href="#"><img src="${pageContext.request.contextPath}images/index/duoshangdongtai/anli1.jpg" alt="">
-                    </a>
-                    <div>
-                        <p>
-                            <a href="#">多商网|瑾泓家电:从细节上提升产品竞争力</a>
-                        </p>
-                        <p>
-                            与很多开发技术人员一样，未创业前，中山景泓达智能科技有限公司的李总只是公司的一部分，多数的时间与精......
-                            <a href="#">查看全文</a>
-                        </p>
-                    </div>
-
-                </li>
-                <li>
-                    <a href="#"><img src="${pageContext.request.contextPath}images/index/duoshangdongtai/anli2.jpg" alt=""></a>
-                    <div>
-                        <p>
-                            <a href="#">日均流量增长至1600，他只花了1个月</a>
-                        </p>
-                        <p>
-                            这是一个日流量从1000稳定上升至1600的店铺诊断优化案例，希望看完能够对各位运营有一些借......
-                            <a href="#">查看全文</a>
-                        </p>
-                    </div>
-                </li>
-                <li>
-                    <a href="#"><img src="${pageContext.request.contextPath}images/index/duoshangdongtai/anli3.jpg" alt=""></a>
-                    <div>
-                        <p>
-                            <a href="#">别再骂微商了！他们都在正经挣大钱！</a>
-                        </p>
-                        <p>
-                            对于很多实体店老板来说，微商又是奥秘的，多商网一位做箱包批发的实体店老板表示：很想去了解微......
-                            <a href="#">查看全文</a>
-                        </p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="dongtai-you">
-            <p>卖家成功案例 <i>更多 ></i></p>
-            <div>
-                <p>
-                    多商网（www.ecduo.cn）是立足珠三角、辐射全国的云供应链平台。依托珠三角地区资源优势，多商网聚集了行业资深的运营团队，深度连接全国300000家天猫淘宝卖家、微商及线下实体店，为所有卖家提供可持续的货源保障以及专业的运营支持服务</p>
-                <p>通过强大的渠道整合能力，已经有超过10000家知名品牌厂商信任并入驻了多商网平台，为分销商提供了强有力的货源保障。</p>
-            </div>
-            <div>
-                <img src="${pageContext.request.contextPath}images/index/duoshangdongtai/ruzhu1.jpg" alt="">
-                <a href="#">立即入驻>></a>
             </div>
         </div>
     </div>

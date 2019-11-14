@@ -2,14 +2,15 @@ package com.lhd.service;
 
 import java.util.List;
 
-import com.lhd.entity.User;
+import com.lhd.entity.UsersTable;
+
 
 public interface UserService {
 	//查询所有
-	List<User> findAll();
+	List<UsersTable> findAll();
 	//用户注册
-	int registUser(User user);
+	int registUser(UsersTable user);
 	//用户登录
-	User loginUser(User user);
+	UsersTable loginUser(UsersTable user);
 
 }
