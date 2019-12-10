@@ -1,4 +1,4 @@
-package com.lhd.contorller;
+package com.lhd.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.lhd.common.Result;
 
 @Controller
-public class TestContorller {
+public class TestController {
 	@RequestMapping("carts")
 	public String atse(Model model) {
 		List<String> list = new ArrayList<>();
@@ -51,8 +51,8 @@ public class TestContorller {
 		return "Sign";
 	}
 	
-	@RequestMapping("index")
+	/*@RequestMapping("index")
 	public String index() {
 		return "Index";
-	}
+	}*/
 }

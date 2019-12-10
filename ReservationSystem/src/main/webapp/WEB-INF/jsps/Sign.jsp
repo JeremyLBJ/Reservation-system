@@ -5,16 +5,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>注册</title>
- <link rel="icon" href="${pageContext.request.contextPath}images/asset-favicon.ico">
-<link rel="stylesheet" href="${pageContext.request.contextPath}css/base.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/sign.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/iconfont.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/jquery.idcode.css">
-    <script src="${pageContext.request.contextPath}js/jquery-1.11.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}js/jquery.validate.js"></script>
-    <script src="${pageContext.request.contextPath}js/additional-methods.js"></script>
-    <script src="${pageContext.request.contextPath}js/jquery.idcode.js"></script>
-    <script src="${pageContext.request.contextPath}js/sign.js"></script>
+ <link rel="icon" href="${pageContext.request.contextPath}../images/asset-favicon.ico">
+<link rel="stylesheet" href="${pageContext.request.contextPath}../css/base.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}../css/sign.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}../css/iconfont.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}../css/jquery.idcode.css">
+    <script src="${pageContext.request.contextPath}../js/jquery-1.11.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}../js/jquery.validate.js"></script>
+    <script src="${pageContext.request.contextPath}../js/additional-methods.js"></script>
+    <script src="${pageContext.request.contextPath}../js/jquery.idcode.js"></script>
+    <script src="${pageContext.request.contextPath}../js/sign.js"></script>
 </head>
 <body>
 <div class="header">
@@ -82,7 +82,7 @@
                 </li>
                 <li class="three">
 
-                    <img src="${pageContext.request.contextPath}images/Login/denglu2.jpg" /></li>
+                    <img src="${pageContext.request.contextPath}../images/Login/denglu2.jpg" /></li>
             </ul>
         </div>
     </div>
@@ -165,7 +165,7 @@
     </div>
     <div class="footer-content-xia">
         <div>
-            <img src="${pageContext.request.contextPath}images/index/shangbiao/shangbiao1.jpg" height="49" width="353"/><img src="${pageContext.request.contextPath}images/index/shangbiao/shangbiao2.png" height="30" width="83"/><img src="${pageContext.request.contextPath}images/index/shangbiao/shangbiao3.png" height="33" width="86"/>
+            <img src="${pageContext.request.contextPath}../images/index/shangbiao/shangbiao1.jpg" height="49" width="353"/><img src="${pageContext.request.contextPath}../images/index/shangbiao/shangbiao2.png" height="30" width="83"/><img src="${pageContext.request.contextPath}../images/index/shangbiao/shangbiao3.png" height="33" width="86"/>
         </div>
         <div>
             <a href="#">关于我们</a>

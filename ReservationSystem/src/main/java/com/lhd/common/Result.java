@@ -8,16 +8,26 @@ public class Result {
 	public Result() {
 		super();
 	}
-	public Result(int code, Object data) {
-		super();
-		this.code = code;
-		this.data = data;
-	}
 	public Result(int code, String msg, Object data) {
 		super();
 		this.code = code;
 		this.msg = msg;
 		this.data = data;
+	}
+	
+	public Result(int code, Object data) {
+		super();
+		this.code = code;
+		this.data = data;
+	}
+	public Result(int code, String msg) {
+		super();
+		this.code = code;
+		this.msg = msg;
+	}
+	public Result(int code) {
+		super();
+		this.code = code;
 	}
 	public int getCode() {
 		return code;

@@ -5,13 +5,13 @@
 <html lang="zh-CN">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
- <script src="${pageContext.request.contextPath}js/jquery-1.11.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}js/carts.js"></script>
-    <link rel="icon" href="${pageContext.request.contextPath}images/asset-favicon.ico">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/carts.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/base.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/iconfont1.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}css/iconfont.css">
+ <script src="${pageContext.request.contextPath}../js/jquery-1.11.1.min.js"></script>
+    <script src="${pageContext.request.contextPath}../js/carts.js"></script>
+    <link rel="icon" href="${pageContext.request.contextPath}../images/asset-favicon.ico">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}../css/carts.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}../css/base.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}../css/iconfont1.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}../css/iconfont.css">
 <title>购物车</title>
 </head>
 <body>
@@ -21,17 +21,13 @@
         <div class="header-zuo">
             <em></em>
             <span></span>
-            <a href=""><span class="iconfont icon-xiaoxi"></span>消息</a><a href="">退出</a>
+            
         </div>
         <div class="header-you">
             <ul>
-                <li><a href="">多商首页</a></li>
-                <li><a href="">我的多商</a></li>
-                <li><a href="">购物车</a></li>
-                <li><a href="">收藏夹</a></li>
+                <li><a href="">商城首页</a></li>
                 <li><a href="">在线客服</a></li>
-                <li><a href="">手机逛多商</a></li>
-                <li><a href="">供应商入住</a></li>
+                <li><a href="">我的购物车 </a></li>
             </ul>
         </div>
     </div>
@@ -39,7 +35,7 @@
 <div class="sousuo">
     <div class="sousuo-content">
         <h1>买家中心</h1>
-        <div><input type="text"><img src="${pageContext.request.contextPath}images/gouwuche/sousuo.PNG"/>
+        <div><input type="text"><img src="${pageContext.request.contextPath}../images/gouwuche/sousuo.PNG"/>
             <d>搜索</d>
         </div>
     </div>
@@ -48,16 +44,15 @@
     <div class="nav-content">
         <dl>
             <dt>您的位置：</dt>
-            <dd><a href="">多商网首页</a> <em>></em></dd>
-            <dd><a href="">我的多商</a><em>></em></dd>
-            <dd><a href="">我的进货车</a></dd>
+            <dd><a href="">商城网首页</a> <em>></em></dd>
+            <dd><a href="">我的购物车</a><em>></em></dd>
         </dl>
     </div>
 </div>
 <div class="main">
     <div class="main-content">
         <div class="img">
-            <img src="${pageContext.request.contextPath}images/gouwuche/dsImg_64.jpg"/>
+            <img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_64.jpg"/>
             <span>您的进货车还没有货品！</span><br>
             <span>现在<a href="">去逛逛~</a></span>
         </div>
@@ -73,9 +68,9 @@
                     <td>小计</td>
                     <td>操作</td>
                 </tr>
-                <tr>
+               <!--  <tr>
                     <td  colspan="7">供应商：广州晴舒服饰有限公司</td>
-                </tr>
+                </tr> -->
                 </thead>
                 <tbody>
 
@@ -108,22 +103,22 @@
     <div class="footer-contennt">
         <div class="footer-tou">
             <ul>
-                <li><img src="${pageContext.request.contextPath}images/gouwuche/dsImg_21.jpg"/></li>
-                <li><img src="${pageContext.request.contextPath}images/gouwuche/dsImg_22.jpg"/></li>
-                <li><img src="${pageContext.request.contextPath}images/gouwuche/dsImg_23.jpg"/></li>
-                <li><img src="${pageContext.request.contextPath}images/gouwuche/dsImg_24.jpg"/></li>
+                <li><img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_21.jpg"/></li>
+                <li><img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_22.jpg"/></li>
+                <li><img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_23.jpg"/></li>
+                <li><img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_24.jpg"/></li>
             </ul>
         </div>
         <div class="footer-zhong">
-            <ul>
+            <!-- <ul>
                 <li>联系我们</li>
                 <li>(020)28872118 /(020)28872158</li>
                 <li>trend@ecmob.cn</li>
                 <li></li>
-            </ul>
+            </ul> -->
             <dl>
-                <dt>关于多商网</dt>
-                <dd>了解多商网</dd>
+                <dt>关于B商城网</dt>
+                <dd>了解B商城网</dd>
                 <dd>加入我们</dd>
                 <dd>联系我们</dd>
             </dl>
@@ -155,7 +150,6 @@
                 <dt>帮助中心</dt>
                 <dd>找回密码</dd>
                 <dd>常见问题</dd>
-                <dd>多商学院</dd>
             </dl>
             <c:forEach items="${List}" var="r">
             <dl>
@@ -168,12 +162,12 @@
         </div>
         <div class="footer-di">
             <span>2019-All rights Reseved</span>
-            <span><img src="${pageContext.request.contextPath}images/gouwuche/dsImg_29.jpg"/>
-            <img src="${pageContext.request.contextPath}images/gouwuche/dsImg_30.jpg"/>
-            <img src="${pageContext.request.contextPath}images/gouwuche/dsImg_31.jpg"/>
-            <img src="${pageContext.request.contextPath}images/gouwuche/dsImg_32.jpg"/>
-            <img src="${pageContext.request.contextPath}images/gouwuche/dsImg_33.jpg"/>
-            <img src="${pageContext.request.contextPath}images/gouwuche/dsImg_34.jpg"/>
+            <span><img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_29.jpg"/>
+            <img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_30.jpg"/>
+            <img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_31.jpg"/>
+            <img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_32.jpg"/>
+            <img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_33.jpg"/>
+            <img src="${pageContext.request.contextPath}../images/gouwuche/dsImg_34.jpg"/>
             </span>
         </div>
     </div>

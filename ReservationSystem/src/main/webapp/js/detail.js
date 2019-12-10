@@ -139,8 +139,8 @@ $(function () {
         olis.each(function (index, el) {
 
             $(el).on("mouseenter", function () {
-                $("#middleImg").children().attr("src", `images/xiangqingye/fangdaj/xiao${index + 1}.jpg`)
-                $("#bigArea").children().attr("src", `images/xiangqingye/fangdaj/xiao${index + 1}.jpg`)
+                $("#middleImg").children().attr("src", `../images/xiangqingye/fangdaj/xiao${index + 1}.jpg`)
+                $("#bigArea").children().attr("src", `../images/xiangqingye/fangdaj/xiao${index + 1}.jpg`)
                 olis.not(this).removeClass("bk")
                 $(this).addClass("bk")
             })
@@ -154,20 +154,20 @@ $(function () {
     //全选
  $(".xinping-you>.you-shang>.remeng>p>em").on("click",function () {
      if($(this).css("background-image")=="url(\"http://127.0.0.1/duoshangwang/src/images/xiangqingye/prolin.jpg\")"){
-         $(this).css("background","url('images/xiangqingye/prolinh.jpg')no-repeat")
-         $(".xinping-you .you-shang .kuanshi>ul>li>p>em").css("background","url('images/xiangqingye/prolinh.jpg')no-repeat")
+         $(this).css("background","url('../images/xiangqingye/prolinh.jpg')no-repeat")
+         $(".xinping-you .you-shang .kuanshi>ul>li>p>em").css("background","url('../images/xiangqingye/prolinh.jpg')no-repeat")
      }else{
-         $(this).css("background","url('images/xiangqingye/prolin.jpg')no-repeat")
-         $(".xinping-you .you-shang .kuanshi>ul>li>p>em").css("background","url('images/xiangqingye/prolin.jpg')no-repeat")
+         $(this).css("background","url('../images/xiangqingye/prolin.jpg')no-repeat")
+         $(".xinping-you .you-shang .kuanshi>ul>li>p>em").css("background","url('../images/xiangqingye/prolin.jpg')no-repeat")
      }
  })
 
     $(".xinping-you .you-shang .kuanshi p em").on("click",function () {
         console.log($(this).css("background-image"))
         if($(this).css("background-image")=="url(\"http://127.0.0.1/duoshangwang/src/images/xiangqingye/prolin.jpg\")"){
-            $(this).css("background","url('images/xiangqingye/prolinh.jpg')no-repeat")
+            $(this).css("background","url('../images/xiangqingye/prolinh.jpg')no-repeat")
         }else{
-            $(this).css("background","url('images/xiangqingye/prolin.jpg')no-repeat")
+            $(this).css("background","url('../images/xiangqingye/prolin.jpg')no-repeat")
         }
 
     })

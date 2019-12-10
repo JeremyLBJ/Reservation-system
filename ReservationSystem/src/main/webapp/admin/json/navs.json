@@ -1,0 +1,32 @@
+[{
+	"title" : "后台首页",
+	"icon" : "icon-computer",
+	"href" : "page/main.html",
+	"spread" : false
+},{
+	"title" : "订单详情",
+	"icon" : "icon-text",
+	"href" : "page/news/newsList.html",
+	"spread" : false
+},{
+	"title" : "其他页面",
+	"icon" : "&#xe630;",
+	"href" : "",
+	"spread" : false,
+	"children" : [
+		{
+			"title" : "上架商品",
+			"icon" : "&#xe609;",
+			"href" : "page/login/login.html",
+			"spread" : false,
+			"target" : "_blank"
+		},
+		{
+			"title" : "秒杀系列",
+			"icon" : "&#xe629;",
+			"href" : "page/login/login.html",
+			"spread" : false,
+			"target" : "_blank"
+		}
+	]
+}]

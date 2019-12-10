@@ -10,8 +10,8 @@ import com.lhd.dao.UsersTableMapper;
 import com.lhd.entity.UsersTable;
 import com.lhd.entity.UsersTableExample;
 import com.lhd.service.UserService;
-@Service
-public class UserServiceImp implements UserService {
+@Service("UserService")
+public class UserServiceImpl implements UserService {
 	
 	@Autowired
 	private UsersTableMapper userMapper;

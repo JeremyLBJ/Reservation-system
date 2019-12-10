@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>B商城后台管理模板</title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../css/register.css" media="all" />
+	<script type="text/javascript" src="../../layui/jquery.min.js"></script>
+	<script type="text/javascript" src="../../layui/vue.min.js"></script>
+	<script type="text/javascript" src="../../layui/layui.js"></script>
+	 <script type="text/javascript" src="register.js"></script> 
+</head>
+
+<body>
+
+	<img src="timg.jpg" class="video-player" preload="auto" autoplay="autoplay" loop="loop" data-height="1080" data-width="1920" height="1080" width="1920">
+	<div class="video_mask"></div>
+	<div class="login" id="app">
+	    <h1>B商城管理注册</h1>
+	    <form class="layui-form" name="userRegister" >
+	    	<div class="layui-form-item">
+				<input class="layui-input" name="username" id="name" placeholder="用户名" lay-verify="required" type="text" autocomplete="off">
+		    </div>
+		    <div class="layui-form-item">
+				<input class="layui-input" name="password" placeholder="密码" lay-verify="required" type="password" autocomplete="off">
+		    </div>
+		    <div class="layui-form-item">
+				<input class="layui-input" name="orderno" placeholder="工单号" lay-verify="required" type="text" autocomplete="off">
+		    </div>
+		    <div class="layui-form-item">
+				<input class="layui-input" name="tel" placeholder="电话号码" lay-verify="required" type="text" autocomplete="off">
+		    </div>
+		    <div class="layui-form-item form_code">
+				<input class="layui-input" name="code" placeholder="验证码" lay-verify="required" type="text" autocomplete="off">
+				<div class="code"><img src="../../images/code.jpg" width="116" height="36"></div>
+		    </div>
+		   
+				 <button class="layui-btn login_btn" lay-submit lay-filter="register">注册</button> 
+		</form>
+	</div>
+</body>
+</html>

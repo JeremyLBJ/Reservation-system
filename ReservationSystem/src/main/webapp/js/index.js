@@ -1,7 +1,7 @@
 //轮播图
 $(function () {
 
-    var str = "<li><img src=\"images/index/lunbotu/lunbotu1.jpg\" /></li>"
+    var str = "<li><img src=\../../images/index/lunbotu/lunbotu1.jpg\ /></li>"
     $(".nav-content-lunbotu ul").append(str)
 
         var i = 0;
@@ -27,7 +27,8 @@ $(function () {
             $(".nav-content-lunbotu ul").stop().animate({left: -732 * i}, 1500)
         }, 2500)
     })
-
+    
+    
 //新鲜抢批
     function tj(ol,li) {
         var str1 = li.eq(0).clone()

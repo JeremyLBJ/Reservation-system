@@ -1,6 +1,5 @@
 package com.lhd.user;
 
-import java.util.Date;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.annotation.MapperScan;
@@ -8,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import com.lhd.ReservationSystemAppliction;
-import com.lhd.entity.User;
+import com.lhd.entity.UsersTable;
 import com.lhd.service.UserService;
 import com.lhd.untils.Md5Untils;
 
@@ -19,13 +18,12 @@ public class UserTest {
 	
 	@Autowired
 	private UserService userService;
-	private User user = new User();
+	private UsersTable user = new UsersTable();
 	
 	@Test
 	public void registUserTest() {
-		user.setUsername("张三");
-		user.setPassworld(Md5Untils.stringMD5("123465a"));
-		user.setCreatetime(new Date());
+		user.setUsername("刘某");
+		user.setPassword(Md5Untils.stringMD5("123456"));
 		int i = userService.registUser(user);
 		if( i > 0 ) {
 			System.out.println("注册成功");
@@ -37,9 +35,9 @@ public class UserTest {
 	@Test
 	public void loginUserTest() {
 		user.setUsername("张三");
-		user.setPassworld(Md5Untils.stringMD5("123465a"));
-		System.out.println(user.getPassworld()+":::::passworld");
-		User user2 = userService.loginUser(user);
+		user.setPassword(Md5Untils.stringMD5("123465a"));
+		System.out.println(user.getPassword()+":::::passworld");
+		UsersTable user2 = userService.loginUser(user);
 		if( null != user2 ) {
 			System.out.println(user2.getUsername()+"::::用户名");
 		}else {
