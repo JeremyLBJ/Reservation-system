@@ -23,20 +23,17 @@
         </div>
         <div class="header-content-you">
             <ul>
-                <li>
-                    <a href="#">我的多商</a>
+            <li>
+                    <a href="#">首页</a>
                 </li>
                 <li>
-                    <a href="#" class="dlk">进货单</a>
+                    <a href="#">我的多商</a>
                 </li>
                 <li>
                     <a href="#">我的收藏</a>
                 </li>
                 <li>
                     <a href="#">客户服务</a>
-                </li>
-                <li>
-                    <a href="#">手机多商</a>
                 </li>
             </ul>
         </div>
@@ -75,13 +72,11 @@
 <div class="nav">
     <div class="nav-content">
         <ul>
-            <li>
-                <a href="#" class="cont">首页</a>
-            </li>
-           	    <c:forEach items="${fList}" var="f" varStatus="stat">
+                <li>
+                </li>
+           	    <c:forEach items="${fList}" var="f">
             <li>
                 <a href="#">${f.ctypename }</a>
-
             </li>
 				</c:forEach>
         </ul>
@@ -104,7 +99,6 @@
 					</div>
 			</c:forEach>
         </div>
-
     </div> 
 </div>
 <div class="wz">
@@ -141,11 +135,8 @@
 
                 </div>
                 <div class="zuo-xia">
-                    <div class="sc">
-                        <p>收藏商品(2人气)</p>
-                    </div>
                     <div class="fx">
-                        分享到 <a href=""></a><a href=""></a><a href=""></a><a href="" id="jia"></a>
+                         <a id="jia"></a>
                     </div>
                 </div>
             </div>
@@ -320,7 +311,7 @@
                     <ul>
                         <li class="nav-ys"><span></span>商品详情</li>
                         <li><span></span>服务承诺与保障</li>
-                        <li><span></span>商品货号</li>
+                        <li><span></span>商品评价</li>
                     </ul>
 
                 </div>
