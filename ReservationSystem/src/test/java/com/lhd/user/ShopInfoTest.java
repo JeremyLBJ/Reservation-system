@@ -38,7 +38,7 @@ public class ShopInfoTest {
 	}
 	
 	/**
-	 * 模糊查询
+	 * 模糊查询....
 	 */
 	@Test
 	public void shopTest () {
