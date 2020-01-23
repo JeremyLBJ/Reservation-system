@@ -9,7 +9,7 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../layui-2.3.0/css/layui.css" media="all" />
 	<link rel="stylesheet" href="../../css/images.css" media="all" />
 </head>
 <body class="childrenBody">
@@ -20,9 +20,12 @@
 			</div>
 			<div class="layui-inline">
 				<a class="layui-btn layui-btn-danger batchDel">批量删除</a>
+				
 			</div>
 			<div class="layui-inline">
-				<div class="layui-form-mid layui-word-aux">　本页所有数据均为静态，刷新后所有操作无效</div>
+				<div class="layui-form-mid layui-word-aux">
+				  <a class="layui-btn layui-btn-danger detail">查看</a>
+				</div>
 			</div>
 		</blockquote>
 		<ul id="Images"></ul>

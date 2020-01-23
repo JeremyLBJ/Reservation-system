@@ -1,7 +1,7 @@
 layui.config({
 	base : "js/"
 }).use(['form','layer'],function(){
-	var form = layui.form(),
+	var form = layui.form ,
 		layer = parent.layer === undefined ? layui.layer : parent.layer,
 		$ = layui.jquery;
 	
@@ -44,25 +44,3 @@ var vm = new Vue({
         }
     } 
 });
-	
-
-		/*function login () {
-			var data = "username" + userLogin.username.val() + "password" + userLogin.password.val() ;
-			console.log(data);
-			  $.ajax({
-	                type: "POST" ,
-	                url:  "../../Login/adminLogin" ,
-	                contentType: "application/json" ,
-	                data: JSON.stringify(data) ,
-	                success: function(data) {
-	                    if(data.code == 1) {
-	                        alert('操作成功', function(index) {
-	                            layer.closeAll();
-	                            window.location.href = '../../index.html';
-	                        });
-	                    }else{
-	                        alert(r.msg);
-	                    }
-	                }
-	            }) ;
-		}*/

@@ -9,11 +9,17 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<link rel="stylesheet" href="../../layui-2.3.0/css/layui.css" media="all" />
 	<link rel="stylesheet" href="//at.alicdn.com/t/font_tnyc012u2rlwstt9.css" media="all" />
 	<link rel="stylesheet" href="../../css/user.css" media="all" />
+	<script type="text/javascript" src="../../vue-2.5.16/vue.min.js"></script> 
+	<script type="text/javascript" src="../../layui-2.3.0/layui.js"></script>
+	<script type="text/javascript" src="../../layui-2.3.0/layui.all.js"></script>
+	<!-- <script type="text/javascript" src="allUsers.js"></script> -->
+	<script type="text/javascript" src="../../jquery-2.2.4/jquery.min.js"></script>
 </head>
 <body class="childrenBody">
+<div  id="rrapp">
 	<blockquote class="layui-elem-quote news_search">
 		<div class="layui-inline">
 		    <div class="layui-input-inline">
@@ -22,14 +28,13 @@
 		    <a class="layui-btn search_btn">查询</a>
 		</div>
 		<div class="layui-inline">
-			<a class="layui-btn layui-btn-normal usersAdd_btn">添加用户</a>
-		</div>
-		<div class="layui-inline">
-			<a class="layui-btn layui-btn-danger batchDel">批量删除</a>
+			<a class="layui-btn layui-btn-danger batchDel" >批量删除</a>
 		</div>
 		
 	</blockquote>
-	<div class="layui-form users_list">
+	
+	<table class="layui-hide" id="grid" lay-filter="grid"></table>
+<!-- 	<div class="layui-form users_list" id="gridid">
 	  	<table class="layui-table">
 		    <colgroup>
 				<col width="50">
@@ -47,17 +52,144 @@
 					<th>登录名</th>
 					<th>邮箱</th>
 					<th>性别</th>
-					<th>会员等级</th>
-					<th>会员状态</th>
-					<th>最后登录时间</th>
+					<th>电话号码</th>
+					<th>消费金额</th>
+					<th>用户住址</th>
 					<th>操作</th>
 				</tr> 
 		    </thead>
 		    <tbody class="users_content"></tbody>
 		</table>
-	</div>
+	</div> -->
 	<div id="page"></div>
-	<script type="text/javascript" src="../../layui/layui.js"></script>
-	<script type="text/javascript" src="allUsers.js"></script>
+	
+	</div>
+	
+	
+<!-- 	<#if shiro.hasPermission("sys:enterprise:update")>
+			<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+		</#if>	
+		<#if shiro.hasPermission("sys:enterprise:delete")>
+			<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+		</#if> -->
+	
+	<!--操作-->
+		<script type="text/html" id="barTpl">
+
+			<a class="layui-btn layui-btn-xs" lay-event="edit" @onclick>编辑</a>
+
+			<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del">删除</a>
+
+		</script>
+	
+	<script type="text/javascript">
+	$(function () {
+		
+	    gridTable = layui.table.render({
+	        id: "gridid",
+	        elem: '#grid',
+	        url:  '../../../user/findAllUser',
+	        cols: [[
+	            {type:'checkbox'},
+	            {field:'username', width:120, title: '用户名'},
+	            {field:'email', minWidth:170, title: '邮箱'},
+	            {field:'sex', minWidth:80, title: '性别'},
+	            {field:'tel', minWidth: 100, title: '电话号码'},
+	            {field:'username', minWidth: 100, title: '消费金额'},
+	            {field:'password', minWidth: 100, title: '用户住址'},
+	            {title: '操作', width:180, templet:'#barTpl',fixed:"right",align:"center"}
+	        ]],
+	        page: true,
+	        loading: true,
+	        limits: [10, 30, 50, 100],
+	        limit: 10
+	    });
+	});
+
+	</script>
+	
+	
+	<script type="text/javascript">
+	var vm = new Vue(
+			{
+				el : '#rrapp',
+				data : {
+					q : {
+						keyword : null
+					},
+					showForm : false,
+					formIsDisable : true,
+				},
+				mounted : function() {
+				},
+				methods : {
+					chooseType : function(rowItem) {
+						alert(rowItem);
+					},
+					selectedRows : function() {
+						var list = layui.table.checkStatus('gridid').data;
+						if (list.length == 0) {
+							alert("请选择一条记录");
+							return;
+						}
+
+						var ids = [];
+						$.each(list, function(index, item) {
+							ids.push(item.id);
+						});
+						return ids;
+					},
+					query : function() {
+						vm.reload();
+					},
+	del : function(ids) {
+						confirm(
+								'确定要删除选中的记录？',
+								function() {
+									$
+											.ajax({
+												type : "POST",
+												url : baseURL
+														+ "sys/enterprise/delete",
+												contentType : "application/json",
+												data : JSON
+														.stringify(ids),
+												success : function(r) {
+													if (r.code == 0) {
+														alert(
+																'操作成功',
+																function(
+																		index) {
+																	vm
+																			.reload();
+																});
+													} else {
+														alert(r.msg);
+													}
+												}
+											});
+								});
+					},
+					info : function(id) {
+						var index = layer.open({
+							title : "查看",
+							type : 2,
+							content : [
+									baseURL + 'sys/enterprise/view?id='
+											+ id, 'yes' ],
+							end : function() {
+								//vm.showForm = false;
+								layer.closeAll();
+							}
+						});
+
+						vm.showForm = false;
+						layer.full(index);
+					}
+				}
+			});
+	
+	
+	</script>
 </body>
 </html>

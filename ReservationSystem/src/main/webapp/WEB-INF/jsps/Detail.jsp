@@ -103,7 +103,7 @@
 </div>
 <div class="wz">
     <div class="wz-content">
-        <p>当前位置： <a href="">多商网</a> > <a href="">时尚女装</a> > <a href="">外套 </a> > <a href="">晴舒
+        <p>当前位置： <a href="">B商网</a> > <a href="">时尚女装</a> > <a href="">外套 </a> > <a href="">晴舒
             新款春秋装英伦风韩版复古格纹chic小西装外套女</a></p>
     </div>
 </div>
@@ -159,22 +159,8 @@
                         <div class="yf-yingchang-wei"><a href="" class="dlk"></a></div>
                     </div>
                 </div>
-                <div class="baokuan">
-                    <div class="baokuan-shang">
-                        <p>爆款指数：</p>
-                        <img src="${pageContext.request.contextPath}../images/xiangqingye/huo.jpg"/>
-                        <p><span>685</span>件成交</p>
-                    </div>
-                    <p>建议零售价 <span>￥218.00</span></p>
-                    <div class="baokuan-zhong">
-                        货号 <span>ED27716687</span><a href="" class="dlk">淘宝活动报名登记</a>
-                    </div>
-                    <div class="baokuan-xia">
-                      &nbsp;<span></span>
-                    </div>
-                </div>
              
-                <div class="leixing">
+                <div class="leixing" style="margin-top: 5px">
                     <div class="leixing-ys">
                         颜色分类 <span class="ys">卡其格纹</span><span>咖啡格纹</span>
                     </div>
@@ -182,72 +168,67 @@
                         尺码
                         <ol>
                             <li>
-                                <ul det-nei=''>
+                                <ul >
                                     <li>S</li>
                                     <li>100件可售</li>
-                                    <li><a href="" class="dlk">登录可见</a></li>
-                                    <li><span class="jian"></span> <input type="text" value="0"> <span
+                                     <li><a ></a></li>
+                                    <li><span class="jian"></span>  <input type="text" value="0">
+                          
+                                    <span
                                             class="jia"></span></li>
                                 </ul>
-                                <ul detnei=''>
+                                <ul >
                                     <li>M</li>
-                                    <li>99件可售</li>
-                                    <li><a href="" class="dlk">登录可见</a></li>
-                                    <li><span class="jian"></span> <input type="text" value="0"> <span
+                                    <li>库存量99件</li>
+                                     <li><a ></a></li>
+                                    <li><span class="jian"></span><!--  <input type="text" value="0"> --> 
+                                 <!-- <div class="cmxs"> -->
+                                    <span class="down dis" id="minusAmount"></span>&nbsp;
+                                    <input type="text" id="inputQuantity" name="inputQuantity" value="1">&nbsp;&nbsp;
+                                    <span class="up dis" id="plusAmount"></span>
+                                <!-- </div> -->
+                                    <span
                                             class="jia"></span></li>
                                 </ul>
-                                <ul detnei=''>
+                                <ul >
                                     <li>L</li>
                                     <li>100件可售</li>
-                                    <li><a href="" class="dlk">登录可见</a></li>
+                                    <li><a ></a></li>
                                     <li><span class="jian"></span> <input type="text" value="0"> <span
                                             class="jia"></span></li>
                                 </ul>
-                                <ul detnei=''>
+                                <ul >
                                     <li>XL</li>
                                     <li>100件可售</li>
-                                    <li><a href="" class="dlk">登录可见</a></li>
-                                    <li><span class="jian"></span> <input type="text" value="0" class="sl"> <span
-                                            class="jia"></span></li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul detnei=''>
-                                    <li>S</li>
-                                    <li>100件可售</li>
-                                    <li><a href="" class="dlk">登录可见</a></li>
-                                    <li><span class="jian"></span> <input type="text" value="0" class="sl"> <span
-                                            class="jia"></span></li>
-                                </ul>
-                                <ul detnei=''>
-                                    <li>M</li>
-                                    <li>99件可售</li>
-                                    <li><a href="" class="dlk">登录可见</a></li>
-                                    <li><span class="jian"></span> <input type="text" value="0" class="sl"> <span
-                                            class="jia"></span></li>
-                                </ul>
-                                <ul detnei=''>
-                                    <li>L</li>
-                                    <li>100件可售</li>
-                                    <li><a href="" class="dlk">登录可见</a></li>
-                                    <li><span class="jian"></span> <input type="text" value="0" class="sl"> <span
-                                            class="jia"></span></li>
-                                </ul>
-                                <ul detnei=''>
-                                    <li>XL</li>
-                                    <li>100件可售</li>
-                                    <li><a href="" class="dlk">登录可见</a></li>
-                                    <li><span class="jian"></span> <input type="text" value="0" class="sl"> <span
+                                     <li><a ></a></li>
+                                    <li><span class="jian"></span> <input type="text" value="0" > <span
                                             class="jia"></span></li>
                                 </ul>
                             </li>
                         </ol>
                     </div>
                 </div>
+                
+                 <div class="baokuan">
+                    <div class="baokuan-shang">
+                        <p>已售:<span>685</span>件成交</p>
+                    </div>
+                    <p>建议零售价 <span>￥218.00</span></p>
+                    <div class="baokuan-zhong">
+                        运费 <span>￥0</span><!-- <a href="" class="dlk">淘宝活动报名登记</a> -->
+                    </div>
+                    <div class="baokuan-xia">
+                      &nbsp;<span></span>
+                    </div>
+                </div>
+                
                 <div class="xiadang">
                     <p>共<em>0</em>件，总共￥<b>00.00</b>元</p>
-                    <a href="" class="dlk" id="jinhuodang" ><img src="${pageContext.request.contextPath}../images/xiangqingye/pro_bgad.jpg"/>加入购物车</a><a class="dlk" id="xiadang">立即下单</a>
-                </div>
+                    <!-- id="xiadang" class="dlk" -->
+						<a href="" class="dlk" id="jinhuodang"><img
+							src="${pageContext.request.contextPath}../images/xiangqingye/pro_bgad.jpg" />加入购物车</a><a
+							 href="${pageContext.request.contextPath}../payMent/PayMentTows" >立即下单</a>
+					</div>
             </div>
         </div>
         <div class="main-content-you">
@@ -428,7 +409,6 @@
 
         <div>
             <dl>
-                <dd>关于多商网</dd>
                 <dt>
                     <a href="#">了解多商网</a>
                 </dt>
@@ -481,9 +461,6 @@
                 <dt>
                     <a href="#">我要入驻</a>
                 </dt>
-                <dt>
-                    <a href="#">产品上架流程</a>
-                </dt>
             </dl>
             <dl>
                 <dd>帮助中心</dd>
@@ -492,9 +469,6 @@
                 </dt>
                 <dt>
                     <a href="#">常见问题</a>
-                </dt>
-                <dt>
-                    <a href="#">多商学院</a>
                 </dt>
             </dl>
         </div>
@@ -514,34 +488,13 @@
             <span>|</span>
             <a href="#"> 联系我们</a>
             <span>|</span>
-            <a href="#"> 多商学院</a>
-            <span>|</span>
             <a href="#">经营证照</a>
             <span>|</span>
         </div>
-        <div>
-            <p>趋势动力旗下广州友商信息科技有限公司版权所有©2005-2019 粤ICP备11099332号 站长统计</p>
-            <p>多商网-珠三角云供应链平台，支持淘宝代销、网店代理，免费提供一件代发</p>
-            <p>地址: 广州市中山大道89号天河软件园华景园区B栋西梯五楼 电话：400-616-3518</p>
-        </div>
+       
     </div>
 </div>
 
-<div class="denglu">
-    <div class="denglu-content">
-        <a href=""></a>
-        <form>
-            <p>账号：</p>
-            <p><input type="text" name="uname"></p>
-            <P>登录密码： <a href="">忘记登录密码?</a></P>
-            <P><input type="password" name="upwd"></P>
-            <P>
-                <button>登&nbsp;&nbsp; 录</button>
-            </P>
-            <P><a href="">免费注册</a></P>
-        </form>
-    </div>
-</div>
 <div class="gudinlan">
     <a href=""></a>
     <a href=""></a>

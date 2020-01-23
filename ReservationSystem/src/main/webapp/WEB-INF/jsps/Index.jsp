@@ -6,8 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>首页</title>
-<script
-	src="${pageContext.request.contextPath}../js/jquery-1.11.1.min.js"></script>
+<script src="${pageContext.request.contextPath}../js/jquery-1.12.3.min.js"></script>
 <script src="${pageContext.request.contextPath}../js/index.js"></script>
 <link rel="icon"
 	href="${pageContext.request.contextPath}../images/asset-favicon.ico">
@@ -25,15 +24,16 @@
 		<div class="header-content">
 
 			<div class="header-content-zuo">
-				<span><a href="#">欢迎来到 B 商城</a></span> <span><a
-					href="${pageContext.request.contextPath}../Login/login">请登录</a> | <a href="sign.html">免费注册</a></span>
+				<span><a href="#">欢迎来到 B 商城</a></span> ${loginUser == null ?  "<span><a
+				  href='../../../user/login'>请登录</a> | <a href='sign.html'>免费注册</a>
+					</span>" : '用户  :   '.concat(loginUser.username)}
+
 			</div>
 			<div class="header-content-you">
 				<ul>
 					<li><a href="#">我的多商</a></li>
 					<li><a href="#">我的收藏</a></li>
 					<li><a href="#">客户服务</a></li>
-					<li><a href="#">手机多商</a></li>
 				</ul>
 			</div>
 		</div>
@@ -47,7 +47,7 @@
 				<div class="center-sr">
 					<img
 						src="${pageContext.request.contextPath}../images/index/sousuo.jpg"
-						alt=""><input type="" placeholder="搜索 商品/品牌/店铺" /> <img
+						alt="" id="search"><input type="text" id="searchContent" placeholder="搜索 商品/品牌" /> <img
 						src="${pageContext.request.contextPath}../images/index/xiangji.jpg"
 						alt="">
 				</div>
@@ -65,10 +65,10 @@
 				</div>
 			</div>
 			<div class="sousuo-content-cy">
-				<img
+				<!-- <img
 					src="http://cdn.img.ecduo.cn/ecduo/Uploads/Picture/2018-10/5bbf17f099a13.png"
 					alt=""> <img
-					src="http://cdn.img.ecduo.cn/ecduo/Uploads/Picture/2018-10/5bbf17f13431c.png">
+					src="http://cdn.img.ecduo.cn/ecduo/Uploads/Picture/2018-10/5bbf17f13431c.png"> -->
 			</div>
 		</div>
 	</div>
@@ -85,8 +85,9 @@
 									<dl>
 										<dt>${cL.cOfName }：</dt>
 										<c:forEach items="${cL.classificationtype }" var="cT">
-											<dd>
-												<a href="${pageContext.request.contextPath}../shopInfo/shopsInfo?id=${cT.id}">${cT.name }</a>
+											<dd>  <!-- detailList -->
+												<%-- <a href="${pageContext.request.contextPath}../Detail/shopInfos?id=${cT.id}">${cT.name }</a> --%>
+												<a href="${pageContext.request.contextPath}../Detail/shopInfos?id=${cT.id}">${cT.name }</a>
 											</dd>
 										</c:forEach>
 									</dl>
@@ -132,9 +133,13 @@
 				<div class="yonghu-a">
 					<img
 						src="${pageContext.request.contextPath}../images/index/touxiang.jpg"
-						alt=""> <span><em>Hi!欢迎来到多商！</em>您还未登录哦~</span> <span>
-						<a href="sign.html" class="a">注册</a> <a href="Login.html">登录</a>
-					</span>
+						alt="">
+						
+						  ${loginUser == null ?  "<span><em>Hi!欢迎来到多商！</em>您还未登录哦~</span> <span>
+						<a href='sign.html' class='a'>注册</a> <a href='../../../user/login'>登录</a>
+					</span>" : '欢迎用户  :   '.concat(loginUser.username)}
+						
+						
 				</div>
 				<div class="yonghu-b">
 					待付款<span>0</span><b>|</b> 代发货<span>0</span><b>|</b> 已完成<span>0</span><b>|</b>
@@ -255,40 +260,37 @@
 
 		</div>
 	</div>
+	<c:forEach items="${dList}" var="d" varStatus="stat">
 	<div class="main-nvzhnag">
 		<div class="main-nvzhnag-content">
 			<p>
-				女装货源<i> </i>
+				${d.ctypename}<i> </i>
 			</p>
 			<div class="nvzhang-zuo">
 				<img
-					src="${pageContext.request.contextPath}../images/index/nvzhuanghuoyuan/nvzhuang1.jpg"
+					src="${pageContext.request.contextPath}../images/index/${d.id}/1.jpg"
 					alt="">
+					
 				<ul>
-					<li><a href="#">T恤</a></li>
-					<li><a href="#">卫衣</a></li>
-					<li><a href="#">衬衫</a></li>
-					<li><a href="#">雪纺/蕾丝衫</a></li>
-					<li><a href="#">连衣裙</a></li>
-					<li><a href="#">半身裙</a></li>
-					<li><a href="#">套装裙</a></li>
-					<li><a href="#">开衫</a></li>
-					<li><a href="#">套头</a></li>
+				<c:forEach items="${d.classificationof }" var="c">
+					<li><a href="${pageContext.request.contextPath}../Detail/shopInfos?id=${c.id}">${c.cOfName}</a></li>
+					
+			</c:forEach>
 				</ul>
 			</div>
 			<div class="nvzhang-zhong">
 				<ul>
 					<li><img
-						src="${pageContext.request.contextPath}../images/index/nvzhuanghuoyuan/nvzhuang2.jpg"
+						src="${pageContext.request.contextPath}../images/index/${d.id}/2.jpg"
 						alt=""></li>
 					<li><img
-						src="${pageContext.request.contextPath}../images/index/nvzhuanghuoyuan/nvzhuang3.jpg"
+						src="${pageContext.request.contextPath}../images/index/${d.id}/3.jpg"
 						alt=""></li>
 					<li><img
-						src="${pageContext.request.contextPath}../images/index/nvzhuanghuoyuan/nvzhuang4.jpg"
+						src="${pageContext.request.contextPath}../images/index/${d.id}/4.jpg"
 						alt=""></li>
 					<li><img
-						src="${pageContext.request.contextPath}../images/index/nvzhuanghuoyuan/nvzhuang5.jpg"
+						src="${pageContext.request.contextPath}../images/index/${d.id}/5.jpg"
 						alt=""></li>
 				</ul>
 			</div>
@@ -305,7 +307,7 @@
 					<ol>
 						<li>
 							<ul>
-								<li><a href="detail.html" target="_blank"><img
+								<li><a href="detail.html" target="_blank"><img style="width: 60px; height: 60px"
 										src="${pageContext.request.contextPath}../images/index/nvzhuanghuoyuan/nvzhuang6.jpg"
 										alt=""></a>
 									<div>
@@ -420,317 +422,9 @@
 			</div>
 		</div>
 	</div>
+</c:forEach>
 	
 	
-	
-	<div class="main-xiangbao">
-		<div class="main-xiangbao-content">
-			<p>
-				箱包货源<i> </i>
-			</p>
-			<div class="xiangbao-you">
-				<div class="xiangbao-you-shang">
-					<h4>新鲜抢批</h4>
-					<ul>
-						<li></li>
-						<li></li>
-
-					</ul>
-				</div>
-				<div class="xiangbao-you-xia">
-					<ol>
-						<li>
-							<ul>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao6.jpg"
-									alt="">
-									<div>
-										<p>至缘 P085</p>
-										<p>
-											<span>￥</span>11.70
-										</p>
-										<p>已售475</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao7.jpg"
-									alt="">
-									<div>
-										<p>至缘 P081</p>
-										<p>
-											<span>￥</span>10.60
-										</p>
-										<p>已售535</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao8.jpg"
-									alt="">
-									<div>
-										<p>至缘斜挎包ZK023</p>
-										<p>
-											<span>￥</span>30.90
-										</p>
-										<p>已售879</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao9.jpg"
-									alt="">
-									<div>
-										<p>起风了 至缘斜跨手提包Q176</p>
-										<p>
-											<span>￥</span>24.50
-										</p>
-										<p>已售972</p>
-									</div></li>
-							</ul>
-						</li>
-						<li>
-							<ul>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao10.jpg"
-									alt="">
-									<div>
-										<p>至缘 P048</p>
-										<p>
-											<span>￥</span>8.50
-										</p>
-										<p>已售960</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao11.png"
-									alt="">
-									<div>
-										<p>至缘新款宽带单肩包 U080</p>
-										<p>
-											<span>￥</span>38.30
-										</p>
-										<p>已售890</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao12.jpg"
-									alt="">
-									<div>
-										<p>至缘 WW10</p>
-										<p>
-											<span>￥</span>24.00
-										</p>
-										<p>已售477</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao13.jpg"
-									alt="">
-									<div>
-										<p>宇洛 妈咪包YL1708</p>
-										<p>
-											<span>￥</span>60.60
-										</p>
-										<p>已售1100</p>
-									</div></li>
-							</ul>
-						</li>
-
-					</ol>
-				</div>
-			</div>
-			<div class="xiangbao-zuo">
-				<img
-					src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao1.jpg"
-					alt="">
-				<ul>
-					<li><a href="#">真皮包</a></li>
-					<li><a href="#">单肩包</a></li>
-					<li><a href="#">女士钱包</a></li>
-					<li><a href="#">小方包</a></li>
-					<li><a href="#">手提包</a></li>
-					<li><a href="#">斜挎包</a></li>
-					<li><a href="#">晚宴包</a></li>
-					<li><a href="#">手拿包</a></li>
-					<li><a href="#">出街潮搭</a></li>
-				</ul>
-			</div>
-			<div class="xiangbao-zhong">
-				<ul>
-					<li><img
-						src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao2.jpg"
-						alt=""></li>
-					<li><img
-						src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao3.jpg"
-						alt=""></li>
-					<li><img
-						src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao4.jpg"
-						alt=""></li>
-					<li><img
-						src="${pageContext.request.contextPath}../images/index/xiangbaohuoyuan/xiangbao5.jpg"
-						alt=""></li>
-				</ul>
-			</div>
-
-		</div>
-	</div>
-	<div class="main-xiexue">
-		<div class="main-xiexue-content">
-			<p>
-				鞋靴货源<i> </i>
-			</p>
-			<div class="xiexue-zuo">
-				<img
-					src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue1.jpg"
-					alt="">
-				<ul>
-					<li><a href="#">中低跟</a></li>
-					<li><a href="#">高跟鞋</a></li>
-					<li><a href="#">单鞋</a></li>
-					<li><a href="#">短靴</a></li>
-					<li><a href="#">中靴</a></li>
-					<li><a href="#">长靴</a></li>
-					<li><a href="#">凉鞋</a></li>
-					<li><a href="#">拖鞋</a></li>
-					<li><a href="#">休闲鞋</a></li>
-				</ul>
-			</div>
-			<div class="xiexue-zhong">
-				<ul>
-					<li><img
-						src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue2.jpg"
-						alt=""></li>
-					<li><img
-						src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue3.jpg"
-						alt=""></li>
-					<li><img
-						src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue4.jpg"
-						alt=""></li>
-					<li><img
-						src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue5.jpg"
-						alt=""></li>
-				</ul>
-			</div>
-			<div class="xiexue-you">
-				<div class="xiexue-you-shang">
-					<h4>新鲜抢批</h4>
-					<ul>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
-				</div>
-				<div class="xiexue-you-xia">
-					<ol>
-						<li>
-							<ul>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue6.jpg"
-									alt="">
-									<div>
-										<p>集迦 集迦GEMPLUS性感2018新高跟鞋女细跟尖头女性网红少女 31831104050</p>
-										<p>
-											<span>￥</span>195.70
-										</p>
-										<p>已售685</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue7.jpg"
-									alt="">
-									<div>
-										<p>集迦 集迦Gemplus秋冬2018新款女士运动厚底袜子鞋韩版百搭欧洲站 31831306070</p>
-										<p>
-											<span>￥</span>189.40
-										</p>
-										<p>已售699</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue8.jpg"
-									alt="">
-									<div>
-										<p>集迦 集迦GEMPLUS网红女2018新玛丽珍仙女鞋懒人一脚蹬尖头韩版 31831304159</p>
-										<p>
-											<span>￥</span>133.00
-										</p>
-										<p>已售652</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue9.jpg"
-									alt="">
-									<div>
-										<p>集迦 集迦GEMPLUS社会单鞋女2018新秋乐福鞋鞋懒人一脚蹬仙女韩版 31831205112</p>
-										<p>
-											<span>￥</span>189.40
-										</p>
-										<p>已售813</p>
-									</div></li>
-							</ul>
-						</li>
-						<li>
-							<ul>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue10.jpg"
-									alt="">
-									<div>
-										<p>哈驰春季头层牛皮豆豆鞋 英伦套脚鞋男士休闲鞋真皮懒人鞋潮鞋 MF173022</p>
-										<p>
-											<span>￥</span>289.00
-										</p>
-										<p>已售710</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue11.jpg"
-									alt="">
-									<div>
-										<p>东琪 时尚潮流老爹鞋酷炫百搭松糕厚底运动休闲小白鞋女鞋 116-2</p>
-										<p>
-											<span>￥</span>85.10
-										</p>
-										<p>已售900</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue12.jpg"
-									alt="">
-									<div>
-										<p>氧气时代 拼色运动鞋女秋冬新款潮流休闲鞋街头潮鞋 YD1801</p>
-										<p>
-											<span>￥</span>220.50
-										</p>
-										<p>已售599</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue13.jpg"
-									alt="">
-									<div>
-										<p>hattie女鞋 新款女鞋 H180029</p>
-										<p>
-											<span>￥</span>266.00
-										</p>
-										<p>已售443</p>
-									</div></li>
-							</ul>
-						</li>
-						<li>
-							<ul>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue14.jpg"
-									alt="">
-									<div>
-										<p>hattie女鞋 18年春夏爆款 H180017</p>
-										<p>
-											<span>￥</span>298.00
-										</p>
-										<p>已售604</p>
-									</div></li>
-								<li><img
-									src="${pageContext.request.contextPath}../images/index/xiexuehuoyuan/xiexue15.jpg"
-									alt="">
-									<div>
-										<p>哈驰休闲皮鞋真皮男鞋运动头层牛皮磨砂皮百搭低帮英伦青年工装鞋 MI462929</p>
-										<p>
-											<span>￥</span>283.00
-										</p>
-										<p>已售849</p>
-									</div></li>
-							</ul>
-						</li>
-					</ol>
-				</div>
-			</div>
-		</div>
-	</div>
 	<div class="liejian">
 		<div class="liejian-content">
 			<p>友情链接</p>

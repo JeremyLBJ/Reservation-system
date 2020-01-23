@@ -13,6 +13,8 @@
     <result column="inventory" jdbcType="DOUBLE" property="inventory" />
     <result column="images" jdbcType="VARCHAR" property="images" />
     <result column="price" jdbcType="DOUBLE" property="price" />
+    <result column="orderNo" jdbcType="VARCHAR" property="orderNo" />
+    <result column="brand" jdbcType="VARCHAR" property="brand" />
   </resultMap>
   
   <select id="findShopInfoById" resultMap="BaseResultMap">
@@ -22,11 +24,18 @@
   <select id="fuzzyQuery" parameterType="com.lhd.entity.ClassificationofGoodsItemExample" resultMap="BaseResultMap">
   		select * from classificationof_goods_item cgs
   		  <where>
-  		  	<if test="name != null and name != ''"></if>
-  		  		and	cgs.cName LIKE concat('%',#{name},'%')
+  		  	<if test="name != null and name != ''">
+  		  		cgs.cName LIKE concat('%',#{name},'%')  or cgs.brand LIKE concat('%',#{name},'%')
+  		   </if>
+  		  
   		  </where>
   
   </select>
+  
+  <!-- <select id="findById" resultMap="BaseResultMap">
+  	SELECT cgi.* FROM classification_type ct 
+		join classificationof_goods_item cgi on ct.id=cgi.cId and ct.id=#{id}
+  </select> -->
   
   <sql id="Example_Where_Clause">
     <!--

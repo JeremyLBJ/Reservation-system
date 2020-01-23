@@ -15,10 +15,12 @@
     	select="com.lhd.dao.ClassificationofGoodsItemMapper.findShopInfoById">
     </collection>
     
+    
   </resultMap>
   <select id="findByCid" resultMap="BaseResultMap">
   	SELECT ct.* from classificationof cf join classification_type ct on ct.cTionf_id=cf.id where cf.id=#{id} 
   </select>
+  
   <sql id="Example_Where_Clause">
     <!--
       WARNING - @mbg.generated

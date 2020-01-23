@@ -2,11 +2,11 @@ layui.config({
 	base : "../../js/"
 }).use(['flow','form','layer'],function(){
     var flow = layui.flow,
-        form = layui.form(),
+        form = layui.form,
         layer = parent.layer === undefined ? layui.layer : parent.layer,
         $ = layui.jquery;
 
-    //流加载图片
+/*    //流加载图片
     var imgNums = 15;  //单页显示图片数量
     flow.load({
         elem: '#Images', //流加载容器
@@ -24,9 +24,9 @@ layui.config({
                 }, 500);
             }); 
         }
-    });
+    });*/
 
-    //删除单张图片
+    /*//删除单张图片
     $("body").on("click",".img_del",function(){
         var _this = $(this);
         layer.confirm('确定删除图片"'+_this.siblings().find("input").attr("title")+'"吗？',{icon:3, title:'提示信息'},function(index){
@@ -34,18 +34,18 @@ layui.config({
             setTimeout(function(){_this.parents("li").remove();},950);
             layer.close(index);
         });
-    })
+    })*/
 
-    //全选
+/*    //全选
     form.on('checkbox(selectAll)', function(data){
         var child = $("#Images li input[type='checkbox']");
         child.each(function(index, item){
             item.checked = data.elem.checked;
         });
         form.render('checkbox');
-    });
+    });*/
 
-    //通过判断文章是否全部选中来确定全选按钮是否选中
+   /* //通过判断文章是否全部选中来确定全选按钮是否选中
     form.on("checkbox(choose)",function(data){
         var child = $(data.elem).parents('#Images').find('li input[type="checkbox"]');
         var childChecked = $(data.elem).parents('#Images').find('li input[type="checkbox"]:checked');
@@ -55,9 +55,9 @@ layui.config({
             $(data.elem).parents('#Images').siblings("blockquote").find('input#selectAll').get(0).checked = false;
         }
         form.render('checkbox');
-    })
+    })*/
 
-    //批量删除
+  /*  //批量删除
     $(".batchDel").click(function(){
         var $checkbox = $('#Images li input[type="checkbox"]');
         var $checked = $('#Images li input[type="checkbox"]:checked');
@@ -79,6 +79,6 @@ layui.config({
         }else{
             layer.msg("请选择需要删除的图片");
         }
-    })
+    })*/
 
 })

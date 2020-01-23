@@ -12,15 +12,15 @@ $(function () {
             var set1 = /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/
             var set2 = /^\w+@\w+\.\w+$/
             return set1.test(value) || set2.test(value)
-        });
+        })
     $.validator.addMethod("checkUemail", function (value, element, param) {
         var set2 = /^\w+@\w+\.\w+$/
         return set2.test(value)
-    });
+    })
     $.validator.addMethod("checkUwz", function (value, element, param) {
         var set2 = /^[a-zA-z]+:\/\/[^\s]*$/
         return set2.test(value)
-    });
+    })
 
     $.idcode.setCode();
    $.validator.addMethod("checkYz", function (value, element, param) {

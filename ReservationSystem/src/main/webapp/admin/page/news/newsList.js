@@ -1,7 +1,7 @@
 layui.config({
 	base : "js/"
 }).use(['form','layer','jquery','laypage'],function(){
-	var form = layui.form(),
+	var form = layui.form
 		layer = parent.layer === undefined ? layui.layer : parent.layer,
 		laypage = layui.laypage,
 		$ = layui.jquery;
@@ -289,12 +289,24 @@ layui.config({
 		    return dataHtml;
 		}
 
+		
+	/*	laypage.render({
+		    elem: 'page' //分页容器的id
+		    ,count: 100 //总页数
+		    ,skin: '#1E9FFF' //自定义选中色值
+		    //,skip: true //开启跳页
+		    ,jump: function(obj, first){
+		      if(!first){
+		        layer.msg('第'+ obj.curr +'页', {offset: 'b'});
+		      }
+		    }
+		  });*/
 		//分页
 		var nums = 13; //每页出现的数据量
 		if(that){
 			newsData = that;
 		}
-		laypage({
+		laypage.render({
 			cont : "page",
 			pages : Math.ceil(newsData.length/nums),
 			jump : function(obj){

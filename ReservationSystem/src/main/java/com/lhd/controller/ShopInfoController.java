@@ -21,10 +21,10 @@ public class ShopInfoController {
 	
 	//根据类型表中的id查出商品详情表中数据
 	@RequestMapping("/shopsInfo")
-	public void shopsInfo (Integer id , Model model) {
+	public String shopsInfo ( Integer id , Model model) {
 		ClassificationType findById = shopInfoService.findById(id) ;
 		model.addAttribute("findById", findById) ;
-		
+		return "Carts" ; 
 	}
 	
 

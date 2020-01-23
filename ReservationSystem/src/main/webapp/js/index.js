@@ -1,7 +1,7 @@
 //轮播图
 $(function () {
 
-    var str = "<li><img src=\../../images/index/lunbotu/lunbotu1.jpg\ /></li>"
+    var str = "<li><img src=\"images/index/lunbotu/lunbotu1.jpg\" /></li>"
     $(".nav-content-lunbotu ul").append(str)
 
         var i = 0;
@@ -27,8 +27,7 @@ $(function () {
             $(".nav-content-lunbotu ul").stop().animate({left: -732 * i}, 1500)
         }, 2500)
     })
-    
-    
+
 //新鲜抢批
     function tj(ol,li) {
         var str1 = li.eq(0).clone()
@@ -142,6 +141,12 @@ $(".yonghu-c .yonghu-c-nav a").eq(1).on("mouseenter click",(function () {
         return false
     })
 
+      //搜索事件
+    $('#search').on("click",function(){
+    	var content = $('#searchContent').val();
+    		window.location.href="../shopItems/search?name="+content;
+    })
+    
     //回到顶部
     $(".dingbu2").on("click",function () {
         $("html,body").animate({scrollTop:"0"},500)
@@ -163,7 +168,7 @@ $(".yonghu-c .yonghu-c-nav a").eq(1).on("mouseenter click",(function () {
 //     });
 //     $("#flipcountdownbox4").flipcountdown({am:true});
 
-
+    
     //页面加载判断用户名
 
     var jsonStr=sessionStorage.getItem("login");

@@ -10,8 +10,6 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}../css/login.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}../css/iconfont.css">
     <script src="${pageContext.request.contextPath}../js/jquery-1.11.1.min.js"></script>
-    <script src="${pageContext.request.contextPath}../js/jquery.validate.js"></script>
-    <script src="${pageContext.request.contextPath}../js/login.js"></script>
 </head>
 <body>
 <div class="header">
@@ -20,12 +18,12 @@
 <div class="main">
         <img src="${pageContext.request.contextPath}../images/Login/denglu2.jpg" alt="">
         <div class="login">
-            <form>
-                <div class="name"><input name="uname" /></div>
-                <div class="pwd"><input  name="upwd" type="password" /></div>
+            <form method="Post">
+                <div class="name"><input name="uname" id="uName" /></div>
+                <div class="pwd"><input id="pwd"  name="upwd" type="password" /></div>
                 <div class="zc"> <a href="#">立即注册</a>
                     <a href="#">忘记密码 &nbsp;&nbsp;&nbsp;&nbsp;</abbr></a></div>
-                <div class="dl"><button>登 录</button></div>
+                <div class="dl"><input id="btn" type="button" value="登录"></div>
                 
             </form>
         </div>
@@ -108,5 +106,32 @@
         
         </div>
 </div>
+<script type="text/javascript">
+$('#btn').click(function(){
+	var username = $('#uName').val() ;
+	console.log(username);
+	var password = $('#pwd').val() ;
+	var date ={
+		username : username ,
+		password : password
+	}
+	  $.ajax({
+          type: "POST" ,
+          url:  "../../../userLogin/userLogin" ,
+          contentType: "application/json" ,
+          data: JSON.stringify(date) ,
+          success: function(r) {
+              if(r.code == 1) {
+                  alert('操作成功')
+                  window.location.href = '../../../shouye/index';
+              }else{
+                  alert(r.msg);
+              }
+          }
+      }) ;
+	
+})
+
+</script>
 </body>
 </html>

@@ -63,6 +63,10 @@ public class ClassificationofGoodsItem {
      *
      * @mbg.generated Sat Nov 16 18:45:00 CST 2019
      */
+    private String orderNo;
+    
+    private String brand;
+    
     public Integer getId() {
         return id;
     }
@@ -198,11 +202,29 @@ public class ClassificationofGoodsItem {
     public void setPrice(Double price) {
         this.price = price;
     }
+    
+	public String getOrderNo() {
+		return orderNo;
+	}
+
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
 
 	@Override
 	public String toString() {
 		return "ClassificationofGoodsItem [id=" + id + ", cid=" + cid + ", cname=" + cname + ", inventory=" + inventory
-				+ ", images=" + images + ", price=" + price + "]";
+				+ ", images=" + images + ", price=" + price + ", orderNo=" + orderNo + ", brand=" + brand + "]";
 	}
+
+	
     
 }

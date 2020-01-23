@@ -8,6 +8,10 @@ import org.apache.ibatis.annotations.Param;
 public interface ClassificationofGoodsItemMapper {
 	
 	
+	
+	List<ClassificationofGoodsItem> findShopInfoById (Integer id) ;
+	
+	
 	/**
 	 * 模糊查询
 	 */

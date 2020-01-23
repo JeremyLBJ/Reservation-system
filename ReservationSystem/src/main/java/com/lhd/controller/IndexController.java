@@ -23,9 +23,11 @@ public class IndexController {
 	
 	@RequestMapping("/index")
 	public String index(Model model) {
-		List<Classificationofgoods> list = indexService.findAll();
-		model.addAttribute("fList", list);
-		return "Index";
+		List<Classificationofgoods> list = indexService.findAll() ;
+		List<Classificationofgoods> findList = indexService.findType() ;
+		model.addAttribute("dList", findList ) ;
+		model.addAttribute("fList", list) ;
+		return "Index" ;
 	}
 	
 }

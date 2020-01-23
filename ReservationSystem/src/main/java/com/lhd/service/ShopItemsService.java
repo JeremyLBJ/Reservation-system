@@ -7,5 +7,5 @@ import com.lhd.entity.ClassificationofGoodsItem;
 public interface ShopItemsService {
 	
 	List<ClassificationofGoodsItem> seachShop (String name)  ;
-
+	
 }

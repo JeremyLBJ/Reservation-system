@@ -139,8 +139,8 @@ $(function () {
         olis.each(function (index, el) {
 
             $(el).on("mouseenter", function () {
-                $("#middleImg").children().attr("src", `../images/xiangqingye/fangdaj/xiao${index + 1}.jpg`)
-                $("#bigArea").children().attr("src", `../images/xiangqingye/fangdaj/xiao${index + 1}.jpg`)
+                $("#middleImg").children().attr("src", `images/xiangqingye/fangdaj/xiao${index + 1}.jpg`)
+                $("#bigArea").children().attr("src", `images/xiangqingye/fangdaj/xiao${index + 1}.jpg`)
                 olis.not(this).removeClass("bk")
                 $(this).addClass("bk")
             })
@@ -154,20 +154,20 @@ $(function () {
     //全选
  $(".xinping-you>.you-shang>.remeng>p>em").on("click",function () {
      if($(this).css("background-image")=="url(\"http://127.0.0.1/duoshangwang/src/images/xiangqingye/prolin.jpg\")"){
-         $(this).css("background","url('../images/xiangqingye/prolinh.jpg')no-repeat")
-         $(".xinping-you .you-shang .kuanshi>ul>li>p>em").css("background","url('../images/xiangqingye/prolinh.jpg')no-repeat")
+         $(this).css("background","url('images/xiangqingye/prolinh.jpg')no-repeat")
+         $(".xinping-you .you-shang .kuanshi>ul>li>p>em").css("background","url('images/xiangqingye/prolinh.jpg')no-repeat")
      }else{
-         $(this).css("background","url('../images/xiangqingye/prolin.jpg')no-repeat")
-         $(".xinping-you .you-shang .kuanshi>ul>li>p>em").css("background","url('../images/xiangqingye/prolin.jpg')no-repeat")
+         $(this).css("background","url('images/xiangqingye/prolin.jpg')no-repeat")
+         $(".xinping-you .you-shang .kuanshi>ul>li>p>em").css("background","url('images/xiangqingye/prolin.jpg')no-repeat")
      }
  })
 
     $(".xinping-you .you-shang .kuanshi p em").on("click",function () {
         console.log($(this).css("background-image"))
         if($(this).css("background-image")=="url(\"http://127.0.0.1/duoshangwang/src/images/xiangqingye/prolin.jpg\")"){
-            $(this).css("background","url('../images/xiangqingye/prolinh.jpg')no-repeat")
+            $(this).css("background","url('images/xiangqingye/prolinh.jpg')no-repeat")
         }else{
-            $(this).css("background","url('../images/xiangqingye/prolin.jpg')no-repeat")
+            $(this).css("background","url('images/xiangqingye/prolin.jpg')no-repeat")
         }
 
     })
@@ -337,19 +337,6 @@ $(".main-content-zhong .leixing .leixing-ys span").click(function () {
     })
 
 
-    //页面加载判断用户名
-    var jsonStr=sessionStorage.getItem("login");
-    var yhm=JSON.parse(jsonStr).uyhm
-    if(yhm!=undefined){
-        $(".header-content-zuo span:eq(1)").html(`"${yhm}" 欢迎您回来！ `+" <a href='' id='tuichu'> 退出</a>");
-        $(".nav-content-yonghu .yonghu-a span:eq(0)").html(`Hi,<a href="#" style="font-weight: 600">${yhm}</a> !`);
-        $(".nav-content-yonghu .yonghu-a span:eq(1)").html(`<a href="#" id='tuichu'> [ 退出 ]  </a>`);
-        $(".nav-content-yonghu .yonghu-a span a").addClass("ys")
-        $(".main-content-zt .main-content-zhong .leixing .leixing-cm ul li a:contains('登录可见')").html("70.25元")
-        $(".header-content-you ul li:eq(1) a").attr({"href":"carts.html","target":"_blank"})
-        $(".main-content .main-content-zt .main-content-zhong .yf-zhong p a").html("70.25元")
-        $(".main-content-zhong .leixing .leixing-cm ul li .jia,.main-content-zhong .leixing .leixing-cm ul li .jian").css({"pointer-events":"","cursor":"pointer"})
-    }
 
 
 

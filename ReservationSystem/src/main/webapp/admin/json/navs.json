@@ -9,6 +9,11 @@
 	"href" : "page/news/newsList.html",
 	"spread" : false
 },{
+	"title" : "用戶详情",
+	"icon" : "icon-text",
+	"href" : "page/user/allUsers.html",
+	"spread" : false
+},{
 	"title" : "其他页面",
 	"icon" : "&#xe630;",
 	"href" : "",
