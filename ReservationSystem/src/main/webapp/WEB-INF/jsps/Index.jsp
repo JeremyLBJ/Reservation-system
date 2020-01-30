@@ -273,7 +273,7 @@
 					
 				<ul>
 				<c:forEach items="${d.classificationof }" var="c">
-					<li><a href="${pageContext.request.contextPath}../Detail/shopInfos?id=${c.id}">${c.cOfName}</a></li>
+					<li><a href="${pageContext.request.contextPath}../shopInfo/shopTypeInfo?id=${c.id}&name=${c.cOfName}">${c.cOfName}</a></li>
 					
 			</c:forEach>
 				</ul>

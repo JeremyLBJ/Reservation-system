@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link rel="icon" href="${pageContext.request.contextPath}../img/asset-favicon.ico">
     <title>B 商城</title>
-
+    
 	<script src="${pageContext.request.contextPath}../js/jquery-1.12.3.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}../js/searchList.js"></script>
     <link rel="stylesheet" href="${pageContext.request.contextPath}../plugins/normalize-css/normalize.css" />
@@ -49,13 +49,13 @@
     <div class="learing-list">
         <div class="list-box">
             <ul>
-                <li>  ${ slist.name } </li>
+                <li>  ${ param.name } </li>
             </ul>
             <ul>
                 <li>品牌：</li>
-                 <c:forEach items="${slist.classificationofGoodsItem }" var="s">
+                 <c:forEach items="${bList}" var="s">
                 	<ol>
-                    <li class="brand" data-id="${s.brand}">${s.brand}</li>
+                    <li class="brand" data-id="${s}">${s}</li>
                 </ol>
                 
                 </c:forEach> 
@@ -63,11 +63,11 @@
             <ul>
                 <li>價格：</li>
                 <ol>
-                    <li class="money" data-id="0-69 ￥">0-69 ￥</li>
-                    <li class="money" data-id="69-180 ￥">69-180 ￥</li>
-                    <li class="money" data-id="180-399 ￥">180-399 ￥</li>
-                    <li class="money" data-id="399-599 ￥">399-599 ￥</li>
-                    <li class="money" data-id="599-1000 ￥">599-1000 ￥</li>
+                    <li>0-69 ￥</li>
+                    <li>69-180 ￥</li>
+                    <li>180-399 ￥</li>
+                    <li>399-599 ￥</li>
+                    <li>599-1000 ￥</li>
                 </ol>
             </ul>
         </div>
@@ -78,7 +78,7 @@
             <div class="col-md-9 list-row-left">
                 <div class="list-cont-left">
                     <div class="tit">
-                          <ul class="nav nav-tabs ">
+                           <ul class="nav nav-tabs ">
                             <li class="active shopTitle" data-id="推荐"><a href="#">推荐</a></li>
                             <li  class="shopTitle" data-id="最新"><a href="#" >最新</a></li>
                             <li  class="shopTitle" data-id="热賣"><a href="#" >热賣</a></li>

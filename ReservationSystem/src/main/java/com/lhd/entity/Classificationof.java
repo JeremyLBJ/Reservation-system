@@ -5,6 +5,8 @@ import java.util.List;
 public class Classificationof {
 	private List<ClassificationType> classificationtype;
 	
+	private List<ClassificationofGoodsItem> classificationofGoodsItems ;
+	
 	
     public List<ClassificationType> getClassificationtype() {
 		return classificationtype;
@@ -16,11 +18,23 @@ public class Classificationof {
 
 	
 
+	public List<ClassificationofGoodsItem> getClassificationofGoodsItems() {
+		return classificationofGoodsItems;
+	}
+
+	public void setClassificationofGoodsItems(List<ClassificationofGoodsItem> classificationofGoodsItems) {
+		this.classificationofGoodsItems = classificationofGoodsItems;
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "Classificationof [classificationtype=" + classificationtype.toString() + ", id=" + id + ", cid=" + cid
-				+ ", cOfName=" + cOfName + "]";
+		return "Classificationof [classificationtype=" + classificationtype + ", classificationofGoodsItems="
+				+ classificationofGoodsItems + ", id=" + id + ", cid=" + cid + ", cOfName=" + cOfName + "]";
 	}
+
+
 
 
 

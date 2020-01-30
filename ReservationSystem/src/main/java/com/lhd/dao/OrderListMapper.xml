@@ -17,6 +17,8 @@
     <result column="tel" jdbcType="VARCHAR" property="tel" />
     <result column="address" jdbcType="VARCHAR" property="address" />
     <result column="userName" jdbcType="VARCHAR" property="username" />
+     <result column="cId" jdbcType="INTEGER" property="cId" />
+    <result column="numbers" jdbcType="INTEGER" property="numbers" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <!--

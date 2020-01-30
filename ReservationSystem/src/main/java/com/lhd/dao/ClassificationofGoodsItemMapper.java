@@ -7,10 +7,14 @@ import org.apache.ibatis.annotations.Param;
 
 public interface ClassificationofGoodsItemMapper {
 	
-	
+	List<ClassificationofGoodsItem> goodsItemsById (Integer id) ;
 	
 	List<ClassificationofGoodsItem> findShopInfoById (Integer id) ;
 	
+	List<ClassificationofGoodsItem>	searchByBrandsOrPrice (@Param("brand") String brand , @Param("priceOne") Integer priceOne ,  @Param("priceTow") Integer priceTow) ;
+	
+	//熱賣
+	List<ClassificationofGoodsItem> hotBuy () ;
 	
 	/**
 	 * 模糊查询

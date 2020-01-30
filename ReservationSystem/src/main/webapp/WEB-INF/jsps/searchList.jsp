@@ -61,11 +61,11 @@
             <ul>
                 <li>價格：</li>
                 <ol>
-                    <li>0-69 ￥</li>
-                    <li>69-180 ￥</li>
-                    <li>180-399 ￥</li>
-                    <li>399-599 ￥</li>
-                    <li>599-1000 ￥</li>
+                  <li class="money" data-id="0-69 ￥">0-69 ￥</li>
+                    <li class="money" data-id="69-180 ￥">69-180 ￥</li>
+                    <li class="money" data-id="180-399 ￥">180-399 ￥</li>
+                    <li class="money" data-id="399-599 ￥">399-599 ￥</li>
+                    <li class="money" data-id="599-1000 ￥">599-1000 ￥</li>
                 </ol>
             </ul>
         </div>
@@ -77,14 +77,14 @@
                 <div class="list-cont-left">
                     <div class="tit">
                         <ul class="nav nav-tabs ">
-                            <li class="active"><a href="#">推荐</a></li>
-                            <li><a href="#">最新</a></li>
-                            <li><a href="#">热评</a></li>
+                            <li class="active shopTitle" data-id="推荐"><a href="#">推荐</a></li>
+                            <li  class="shopTitle" data-id="最新"><a href="#" >最新</a></li>
+                            <li  class="shopTitle" data-id="热賣"><a href="#" >热賣</a></li>
                             <div class="page navbar-right">
-                                <a href="#" class="prev">
+                                <a href="#" id="prev" class="prev">
                                     < </a>
-                                        <span class="">1/28</span>
-                                        <a href="#" class="next"> ></a>
+                                        <span class="fengYe">1/28</span>
+                                        <a href="#" id="next" class="next"> ></a>
                             </div>
                         </ul>
                     </div>
